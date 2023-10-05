@@ -19,5 +19,6 @@
       "error",
       { "code": 120, "ignoreComments": true, "ignoreStrings": true, "ignoreTemplateLiterals": true, "ignoreUrls": true }
     ]
+    // "react/props-types": "off"
   }
 }
