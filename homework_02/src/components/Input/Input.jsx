@@ -1,11 +1,10 @@
 import React from "react";
-// import "./Input.css";
 
-const Input = ({ labelDesription, ...props }) => {
+const Input = ({ inputId, labelDesription, ...props }) => {
   return (
     <>
-      <label htmlFor="search">{labelDesription}</label>
-      <input type="number" className="searchInput" id="search" name="search" {...props} />
+      <label htmlFor={inputId}>{labelDesription}</label>
+      <input type="number" id={inputId} {...props} />
     </>
   );
 };

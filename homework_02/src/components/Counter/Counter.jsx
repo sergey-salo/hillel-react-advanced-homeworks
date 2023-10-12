@@ -15,13 +15,13 @@ function setLocalStorageItem(key, value) {
 }
 
 const Counter = () => {
-  const [counter, setCounter] = useState(+getLocalStorageValueOrDefault("counter", 0));
-  const [minValue, setMinValue] = useState(+getLocalStorageValueOrDefault("minValue", 0));
-  const [maxValue, setMaxValue] = useState(+getLocalStorageValueOrDefault("maxValue", 50));
-  const [isDecreaseVisible, setIsDecreaseVisible] = useState(
-    Boolean(getLocalStorageValueOrDefault("isDecreaseVisible", true))
+  const [counter, setCounter] = useState(() => +getLocalStorageValueOrDefault("counter", 0));
+  const [minValue, setMinValue] = useState(() => +getLocalStorageValueOrDefault("minValue", 0));
+  const [maxValue, setMaxValue] = useState(() => +getLocalStorageValueOrDefault("maxValue", 50));
+  const [isDecreaseVisible, setIsDecreaseVisible] = useState(() =>
+    Boolean(getLocalStorageValueOrDefault("isDecreaseVisible", false))
   );
-  const [isIncreaseVisible, setIsIncreaseVisible] = useState(
+  const [isIncreaseVisible, setIsIncreaseVisible] = useState(() =>
     Boolean(getLocalStorageValueOrDefault("isIncreaseVisible", true))
   );
 
@@ -60,10 +60,24 @@ const Counter = () => {
 
       <div className="counter-toggles">
         <div>
-          <Input labelDesription="Min value:" min="0" value={minValue} onChange={handleChangeMinValue} />
+          <Input
+            inputId="minInput"
+            labelDesription="Min value:"
+            min="0"
+            name="min value"
+            value={minValue}
+            onChange={handleChangeMinValue}
+          />
         </div>
         <div>
-          <Input labelDesription="Max value:" min="0" value={maxValue} onChange={handleChangeMaxValue} />
+          <Input
+            inputId="maxInput"
+            labelDesription="Max value:"
+            min="0"
+            name="max value"
+            value={maxValue}
+            onChange={handleChangeMaxValue}
+          />
         </div>
       </div>
     </div>

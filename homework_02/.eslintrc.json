@@ -15,6 +15,7 @@
   "rules": {
     //add customize rules here as per your project's needs\
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off"
   }
 }
