@@ -1,0 +1,17 @@
+.app {
+  min-height: 100vh;
+}
+
+.dark {
+  background: #1a1a1a;
+  color: white;
+}
+
+.light {
+  background: #f9f9f9;
+  color: black;
+}
+
+.theme-gtoggle {
+  padding: 20px;
+}
