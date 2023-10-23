@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from 'react-router-dom'
 
-import { List, ListItem, ListItemText, Typography } from '@mui/material'
+import { Avatar, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material'
 
 const Users = () => {
   const users = useLoaderData()
@@ -13,6 +13,9 @@ const Users = () => {
       <List>
         {users.map((user) => (
           <ListItem key={user.id} component={Link} to={`/users/${user.id}`}>
+            <ListItemAvatar>
+              <Avatar alt={user.name} src={`https://mui.com/static/images/avatar/${user.id}.jpg`} />
+            </ListItemAvatar>
             <ListItemText primary={user.name} secondary={user.email} />
           </ListItem>
         ))}

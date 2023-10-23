@@ -31,7 +31,7 @@ module.exports = {
         ['builtin', 'external', 'internal'],
         ['parent', 'sibling', 'index']
       ],
-      'newlines-between': 'always',
+
       pathGroups: [
         { group: 'builtin', pattern: 'react**', position: 'before' },
         { group: 'external', pattern: '@material-ui/**', position: 'after' },
