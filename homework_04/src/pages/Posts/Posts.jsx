@@ -55,4 +55,5 @@ const Posts = () => {
   )
 }
 
+// export { Posts as Component }
 export { Posts }

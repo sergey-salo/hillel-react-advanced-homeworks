@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { capitalize } from 'lodash';
 
 import { JSON_PLACEHOLDER_BASE_URL } from '../../constants/index.js';
@@ -26,6 +27,10 @@ class JsonPlaceholderAPI extends API {
 
   async deleteUser({ signal, userId }) {
     return await this.fetch({ path: `users/${userId}`, signal, method: 'DELETE' })
+  }
+
+  async updateUser({ signal, userId, updates }) {
+    return await this.fetch({ path: `users/${userId}`, signal, method: 'PATCH', body: updates })
   }
 
   // Posts

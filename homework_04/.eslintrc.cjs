@@ -21,6 +21,10 @@ module.exports = {
   },
   plugins: ['react-refresh'],
   rules: {
+    'prettier/prettier': [
+      'off',
+      { endofline: true }
+    ],
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
@@ -31,7 +35,6 @@ module.exports = {
         ['builtin', 'external', 'internal'],
         ['parent', 'sibling', 'index']
       ],
-
       pathGroups: [
         { group: 'builtin', pattern: 'react**', position: 'before' },
         { group: 'external', pattern: '@material-ui/**', position: 'after' },

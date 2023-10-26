@@ -11,7 +11,7 @@ class API {
         ContentType: 'application/json',
         ...headers,
       },
-      body,
+      body: JSON.stringify(body),
       ...rest,
     }).then((response) => response.json())
   }
